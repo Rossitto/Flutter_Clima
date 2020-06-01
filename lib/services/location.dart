@@ -9,10 +9,12 @@ class Location {
       Position position = await Geolocator()
           .getCurrentPosition(desiredAccuracy: LocationAccuracy.low);
       print(position);
+      latitude = position.latitude;
+      longitude = position.longitude;
+      print('latitude: $latitude');
+      print('longitude: $longitude');
     } catch (e) {
       print(e);
     }
   }
 }
-
-// eu estava fazendo o challenge 01:08' -> passando a lógica do get Location pra location.dart
